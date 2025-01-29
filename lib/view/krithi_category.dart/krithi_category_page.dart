@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:gurugranth/constants/constants.dart';
 import 'package:gurugranth/database/krithi_database.dart';
 import 'package:gurugranth/routes/app_routes.dart';
+import 'package:gurugranth/view/krithi_page/krithi_page.dart';
 
 class KrithiCategoryPage extends StatelessWidget {
   const KrithiCategoryPage({super.key});
@@ -27,7 +28,11 @@ class KrithiCategoryPage extends StatelessWidget {
         child: ListView.separated(
             itemBuilder: (context, index) => GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, AppRoutes.krithiPage);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => KrithiPage(indexCount: index),
+                        ));
                   },
                   child: KrithikalContainer(
                     index: index,
@@ -78,13 +83,13 @@ class KrithikalContainer extends StatelessWidget {
                     AssetImage(KrithiDatabase.krithiDatabase[index]['image']),
               ),
               SizedBox(
-                width: 20.w,
+                width: 15.w,
               ),
               Text(
                 KrithiDatabase.krithiDatabase[index]['title'],
                 style: GoogleFonts.anekMalayalam(
                   textStyle: TextStyle(
-                    fontSize: 20.sp,
+                    fontSize: 18.sp,
                     fontWeight: FontWeight.w600,
                   ),
                 ),

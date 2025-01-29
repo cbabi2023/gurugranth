@@ -9,7 +9,8 @@ import 'package:gurugranth/view/krithi_page/krithi_page_controller.dart';
 import 'package:provider/provider.dart';
 
 class KrithiPage extends StatelessWidget {
-  const KrithiPage({super.key});
+  final int indexCount;
+  const KrithiPage({super.key, required this.indexCount});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +52,7 @@ class KrithiPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  KrithiDatabase.krithiDatabase[0]['title'],
+                  KrithiDatabase.krithiDatabase[indexCount]['title'],
                   style: GoogleFonts.anekMalayalam(
                     textStyle: TextStyle(
                       fontSize: (25 + providerObj.currentIndex).sp,
@@ -60,10 +61,10 @@ class KrithiPage extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  KrithiDatabase.krithiDatabase[0]['lyrics'],
+                  KrithiDatabase.krithiDatabase[indexCount]['lyrics'],
                   style: GoogleFonts.anekMalayalam(
                     textStyle: TextStyle(
-                      fontSize: (16 + providerObj.currentIndex).sp,
+                      fontSize: (15 + providerObj.currentIndex).sp,
                     ),
                   ),
                   textAlign: TextAlign.center,

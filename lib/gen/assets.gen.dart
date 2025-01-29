@@ -29,8 +29,12 @@ class $AssetsPngsGen {
   /// File path: assets/pngs/snd_two.png
   AssetGenImage get sndTwo => const AssetGenImage('assets/pngs/snd_two.png');
 
+  /// File path: assets/pngs/subr.jpg
+  AssetGenImage get subr => const AssetGenImage('assets/pngs/subr.jpg');
+
   /// List of all assets
-  List<AssetGenImage> get values => [ganapathy, guruimage, sarada, snd, sndTwo];
+  List<AssetGenImage> get values =>
+      [ganapathy, guruimage, sarada, snd, sndTwo, subr];
 }
 
 class Assets {
