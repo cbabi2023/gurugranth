@@ -23,6 +23,9 @@ class $AssetsPngsGen {
   /// File path: assets/pngs/sarada.jpg
   AssetGenImage get sarada => const AssetGenImage('assets/pngs/sarada.jpg');
 
+  /// File path: assets/pngs/sivan.jpg
+  AssetGenImage get sivan => const AssetGenImage('assets/pngs/sivan.jpg');
+
   /// File path: assets/pngs/snd.jpg
   AssetGenImage get snd => const AssetGenImage('assets/pngs/snd.jpg');
 
@@ -34,7 +37,7 @@ class $AssetsPngsGen {
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [ganapathy, guruimage, sarada, snd, sndTwo, subr];
+      [ganapathy, guruimage, sarada, sivan, snd, sndTwo, subr];
 }
 
 class Assets {

@@ -86,6 +86,7 @@ class KrithikalContainer extends StatelessWidget {
               ),
               Text(
                 KrithiDatabase.krithiDatabase[index]['title'],
+                overflow: TextOverflow.ellipsis,
                 style: GoogleFonts.anekMalayalam(
                   textStyle: TextStyle(
                     fontSize: 18.sp,
