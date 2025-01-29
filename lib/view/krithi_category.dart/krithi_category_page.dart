@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gurugranth/constants/constants.dart';
 import 'package:gurugranth/database/krithi_database.dart';
-import 'package:gurugranth/routes/app_routes.dart';
 import 'package:gurugranth/view/krithi_page/krithi_page.dart';
 
 class KrithiCategoryPage extends StatelessWidget {

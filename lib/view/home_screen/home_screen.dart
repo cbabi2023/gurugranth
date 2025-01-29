@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                       index == 0
                           ? Navigator.pushNamed(
                               context, AppRoutes.krithiCategoryPage)
-                          : null;
+                          : Navigator.pushNamed(context, AppRoutes.commingSoon);
                     },
                     child: HomeGridCard(indexCount: index),
                   );
