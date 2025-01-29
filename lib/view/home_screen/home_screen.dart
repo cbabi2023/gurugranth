@@ -11,62 +11,60 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.0.h),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                // Top Content
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      Assets.pngs.guruimage.path,
-                      width: 100.h,
-                      height: 100.h,
-                    ),
-                    SizedBox(height: 5.h),
-                    Text(
-                      'ഗുരുഗ്രന്ഥം',
-                      style: GoogleFonts.anekMalayalam(
-                        textStyle: TextStyle(
-                          fontSize: 24.sp,
-                          fontWeight: FontWeight.w600,
-                        ),
+          child: Column(
+            children: [
+              // Top Content
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    Assets.pngs.guruimage.path,
+                    width: 100.h,
+                    height: 100.h,
+                  ),
+                  SizedBox(height: 5.h),
+                  Text(
+                    'ഗുരുഗ്രന്ഥം',
+                    style: GoogleFonts.anekMalayalam(
+                      textStyle: TextStyle(
+                        fontSize: 24.sp,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
-                  ],
-                ),
-
-                SizedBox(height: 30.h),
-
-                // Grid View
-
-                GridView.builder(
-                  shrinkWrap: true,
-                  itemCount: HomeData.homeCategoryData.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 10.w,
-                    mainAxisSpacing: 20.h,
-                    childAspectRatio: 0.8,
                   ),
-                  itemBuilder: (context, index) {
-                    return GestureDetector(
-                      onTap: () {
-                        index == 0
-                            ? Navigator.pushNamed(
-                                context, AppRoutes.krithiCategoryPage)
-                            : Navigator.pushNamed(
-                                context, AppRoutes.commingSoon);
-                      },
-                      child: HomeGridCard(indexCount: index),
-                    );
-                  },
+                ],
+              ),
+
+              SizedBox(height: 30.h),
+
+              // Grid View
+
+              GridView.builder(
+                shrinkWrap: true,
+                itemCount: HomeData.homeCategoryData.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10.w,
+                  mainAxisSpacing: 20.h,
+                  childAspectRatio: 0.8,
                 ),
-              ],
-            ),
+                itemBuilder: (context, index) {
+                  return GestureDetector(
+                    onTap: () {
+                      index == 0
+                          ? Navigator.pushNamed(
+                              context, AppRoutes.krithiCategoryPage)
+                          : Navigator.pushNamed(context, AppRoutes.commingSoon);
+                    },
+                    child: HomeGridCard(indexCount: index),
+                  );
+                },
+              ),
+            ],
           ),
         ),
       ),

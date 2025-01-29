@@ -74,27 +74,34 @@ class KrithikalContainer extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            children: [
-              CircleAvatar(
-                radius: 25.r,
-                backgroundImage:
-                    AssetImage(KrithiDatabase.krithiDatabase[index]['image']),
-              ),
-              SizedBox(
-                width: 15.w,
-              ),
-              Text(
-                KrithiDatabase.krithiDatabase[index]['title'],
-                overflow: TextOverflow.ellipsis,
-                style: GoogleFonts.anekMalayalam(
-                  textStyle: TextStyle(
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w600,
+          Expanded(
+            child: Row(
+              children: [
+                CircleAvatar(
+                  radius: 25.r,
+                  backgroundImage:
+                      AssetImage(KrithiDatabase.krithiDatabase[index]['image']),
+                ),
+                SizedBox(
+                  width: 15.w,
+                ),
+                Text(
+                  KrithiDatabase.krithiDatabase[index]['title'].length > 16
+                      ? KrithiDatabase.krithiDatabase[index]['title']
+                              .substring(0, 15) +
+                          '...'
+                      : KrithiDatabase.krithiDatabase[index]['title'],
+                  maxLines: 1,
+                  overflow: TextOverflow.fade,
+                  style: GoogleFonts.anekMalayalam(
+                    textStyle: TextStyle(
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Icon(Icons.arrow_forward_ios, size: 18.sp),
         ],
