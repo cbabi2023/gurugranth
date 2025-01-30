@@ -30,23 +30,28 @@ class KrithiCategoryPage extends StatelessWidget {
             style: context.anekMalayalamSemiBold20
                 .copyWith(fontSize: 20.sp, color: Colors.white)),
       ),
-      body: ListView.separated(
-          itemBuilder: (context, index) => GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => KrithiPage(indexCount: index),
-                      ));
-                },
-                child: KrithikalContainer(
-                  index: index,
+      body: Padding(
+        padding: EdgeInsets.only(top: 10.r),
+        child: ListView.separated(
+            addAutomaticKeepAlives: true,
+            itemBuilder: (context, index) => GestureDetector(
+                  onTap: () {
+                    HapticFeedback.selectionClick();
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => KrithiPage(indexCount: index),
+                        ));
+                  },
+                  child: KrithikalContainer(
+                    index: index,
+                  ),
                 ),
-              ),
-          separatorBuilder: (context, index) => SizedBox(
-                height: 10.h,
-              ),
-          itemCount: KrithiDatabase.krithiDatabase.length),
+            separatorBuilder: (context, index) => SizedBox(
+                  height: 10.h,
+                ),
+            itemCount: KrithiDatabase.krithiDatabase.length),
+      ),
     );
   }
 }
@@ -87,7 +92,8 @@ class KrithikalContainer extends StatelessWidget {
                   CircleAvatar(
                     radius: 25.r,
                     backgroundImage: AssetImage(
-                        KrithiDatabase.krithiDatabase[index]['image']),
+                      KrithiDatabase.krithiDatabase[index]['image'],
+                    ),
                   ),
                   SizedBox(
                     width: 15.w,
@@ -99,13 +105,9 @@ class KrithikalContainer extends StatelessWidget {
                             '...'
                         : KrithiDatabase.krithiDatabase[index]['title'],
                     maxLines: 1,
-                    overflow: TextOverflow.fade,
-                    style: GoogleFonts.anekMalayalam(
-                      textStyle: TextStyle(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+                    overflow: TextOverflow.ellipsis,
+                    style: context.anekMalayalamRegular16
+                        .copyWith(fontSize: 16.sp),
                   ),
                 ],
               ),
