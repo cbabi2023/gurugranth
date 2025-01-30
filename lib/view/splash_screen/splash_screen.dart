@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:gurugranth/extensions/font_extensions/font_extensions.dart';
 import 'package:gurugranth/gen/assets.gen.dart';
 import 'package:gurugranth/routes/app_routes.dart';
 
@@ -22,9 +22,12 @@ class _SplashScreenState extends State<SplashScreen> {
         _scale = 1.0;
       });
 
+//TODO: we check the mounted property to avoid calling setState on a disposed widget
       Future.delayed(Duration(seconds: 3), () {
-        Navigator.pushNamedAndRemoveUntil(
-            context, AppRoutes.homeScreen, (route) => false);
+        if (mounted) {
+          Navigator.pushNamedAndRemoveUntil(
+              context, AppRoutes.homeScreen, (route) => false);
+        }
       });
     });
   }
@@ -37,21 +40,21 @@ class _SplashScreenState extends State<SplashScreen> {
           scale: _scale,
           duration: Duration(seconds: 2),
           curve: Curves.easeInOut,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(Assets.pngs.guruimage.path),
-              SizedBox(height: 10.h),
-              Text(
-                'ഗുരുഗ്രന്ഥം',
-                style: GoogleFonts.anekMalayalam(
-                  textStyle: TextStyle(
-                    fontSize: 50.sp,
-                    fontWeight: FontWeight.w600,
-                  ),
+          child: Hero(
+
+
+            tag: 'logo', 
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(Assets.pngs.guruimage.path),
+                SizedBox(height: 10.r),
+                Text(
+                  'ഗുരുഗ്രന്ഥം',
+                  style: context.anekMalayalamBold18.copyWith(fontSize: 25.sp),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
