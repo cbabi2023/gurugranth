@@ -4021,15 +4021,13 @@ class KrithiDatabase {
 
 // 40th krithi
 
-{
-"title" : "title",
-"image" : Assets.pngs.guru.path ,
-"lyrics" : """ 
+    {
+      "title": "title",
+      "image": Assets.pngs.guru.path,
+      "lyrics": """
 
 """
-},
-
-
+    },
 
 // 41th krithi
 // 42th krithi
