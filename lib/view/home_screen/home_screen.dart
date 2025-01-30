@@ -128,7 +128,7 @@ class HomeGridCard extends StatelessWidget {
                   HomeData.homeCategoryData[indexCount].values.first.toString(),
                   textAlign: TextAlign.center,
                   style: context.anekMalayalamSemiBold20
-                      .copyWith(fontSize: 15.sp, color: Colors.white)),
+                      .copyWith(fontSize: 17.sp, color: Colors.white)),
             ),
           ),
         ],
