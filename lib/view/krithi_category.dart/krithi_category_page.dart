@@ -75,7 +75,7 @@ class KrithikalContainer extends StatelessWidget {
           color: pureWhite,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: .3),
+              color: Colors.black.withValues(alpha: .2),
               spreadRadius: 1,
               blurRadius: 5,
               offset: Offset(0, 3),

@@ -92,9 +92,9 @@ class HomeGridCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(12.r),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 20),
+            color: Colors.black.withValues(alpha: .5),
             blurRadius: 8,
-            offset: Offset(0, 1),
+            offset: Offset(0, 3),
           ),
         ],
       ),
