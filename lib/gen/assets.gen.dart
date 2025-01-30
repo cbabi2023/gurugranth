@@ -16,6 +16,9 @@ class $AssetsPngsGen {
   AssetGenImage get ganapathy =>
       const AssetGenImage('assets/pngs/ganapathy.jpg');
 
+  /// File path: assets/pngs/guru.jpg
+  AssetGenImage get guru => const AssetGenImage('assets/pngs/guru.jpg');
+
   /// File path: assets/pngs/guruimage.png
   AssetGenImage get guruimage =>
       const AssetGenImage('assets/pngs/guruimage.png');
@@ -40,7 +43,7 @@ class $AssetsPngsGen {
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [ganapathy, guruimage, sarada, sivan, snd, sndTwo, subr, vishnu];
+      [ganapathy, guru, guruimage, sarada, sivan, snd, sndTwo, subr, vishnu];
 }
 
 class Assets {
