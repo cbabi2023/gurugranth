@@ -99,7 +99,7 @@ class KrithikalContainer extends StatelessWidget {
                     width: 15.w,
                   ),
                   Text(
-                    KrithiDatabase.krithiDatabase[index]['title'].length > 16
+                    KrithiDatabase.krithiDatabase[index]['title'].length > 20
                         ? KrithiDatabase.krithiDatabase[index]['title']
                                 .substring(0, 15) +
                             '...'
