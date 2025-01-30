@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gurugranth/constants/constants.dart';
 import 'package:gurugranth/database/home_database.dart';
 import 'package:gurugranth/gen/assets.gen.dart';
 import 'package:gurugranth/routes/app_routes.dart';
@@ -90,7 +91,7 @@ class HomeGridCard extends StatelessWidget {
       width: 160.w,
       height: 180.h,
       decoration: BoxDecoration(
-        color: Colors.blue,
+        gradient: containerGradient,
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
