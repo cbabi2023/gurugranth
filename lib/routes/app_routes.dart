@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:gurugranth/coming_soon/coming_soon.dart';
-import 'package:gurugranth/view/guruarul_category/guruarul_category.dart';
+import 'package:gurugranth/view/guruarul_category/guruarul_category.dart'
+    as guruarul;
 import 'package:gurugranth/view/home_screen/home_screen.dart';
 import 'package:gurugranth/view/krithi_category.dart/krithi_category_page.dart';
 
@@ -25,7 +27,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const KrithiCategoryPage());
 
       case guruArulCategoryPage:
-        return MaterialPageRoute(builder: (_) => const GuruarulCategory());
+        return MaterialPageRoute(
+            builder: (_) => const guruarul.GuruarulCategory());
 
       case commingSoon:
         return MaterialPageRoute(builder: (_) => const ComingSoon());
@@ -33,9 +36,10 @@ class AppRoutes {
       default:
         return MaterialPageRoute(
             builder: (context) => Scaffold(
-                    body: Center(
-                  child: Text('No route defined for ${settings.name}'),
-                )));
+                  body: Center(
+                    child: Text('No route defined for ${settings.name}'),
+                  ),
+                ));
     }
   }
 }
