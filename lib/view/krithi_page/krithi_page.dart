@@ -53,6 +53,7 @@ class KrithiPage extends StatelessWidget {
               children: [
                 Text(
                   KrithiDatabase.krithiDatabase[indexCount]['title'],
+                  textAlign: TextAlign.center,
                   style: GoogleFonts.anekMalayalam(
                     textStyle: TextStyle(
                       fontSize: (25 + providerObj.currentIndex).sp,
