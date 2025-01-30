@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gurugranth/coming_soon/coming_soon.dart';
+import 'package:gurugranth/view/guruarul_category/guruarul_category.dart';
 import 'package:gurugranth/view/home_screen/home_screen.dart';
 import 'package:gurugranth/view/krithi_category.dart/krithi_category_page.dart';
 
@@ -9,6 +10,7 @@ class AppRoutes {
   static const String splahScreen = "/splashscreen";
   static const String homeScreen = "/homescreen";
   static const String krithiCategoryPage = "/krithicategorypage";
+  static const String guruArulCategoryPage = "/guruarulcategorypage";
   static const String commingSoon = "/commingsoon";
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -21,6 +23,9 @@ class AppRoutes {
 
       case krithiCategoryPage:
         return MaterialPageRoute(builder: (_) => const KrithiCategoryPage());
+
+      case guruArulCategoryPage:
+        return MaterialPageRoute(builder: (_) => const GuruarulCategory());
 
       case commingSoon:
         return MaterialPageRoute(builder: (_) => const ComingSoon());
