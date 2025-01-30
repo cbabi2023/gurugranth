@@ -4787,6 +4787,14 @@ class KrithiDatabase {
     },
 
 // 43th krithi
+
+{
+"title" : "title",
+"image" : Assets.pngs.guru.path ,
+"lyrics" : """ 
+
+"""
+},
 // 44th krithi
 // 45th krithi
 // 46th krithi
