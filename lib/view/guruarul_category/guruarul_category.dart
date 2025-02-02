@@ -3,10 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gurugranth/constants/constants.dart';
 import 'package:gurugranth/database/guruarul_database.dart';
-import 'package:gurugranth/database/krithi_database.dart';
 import 'package:gurugranth/view/guruarul_page/guruarul_page.dart';
-import 'package:gurugranth/view/krithi_category.dart/krithi_category_page.dart';
-import 'package:gurugranth/view/krithi_page/krithi_page.dart';
 
 class GuruarulCategory extends StatelessWidget {
   const GuruarulCategory({super.key});
