@@ -4561,7 +4561,7 @@ class KrithiDatabase {
 
 
 """
-    },
+    
     },
 
 // 41th krithi
