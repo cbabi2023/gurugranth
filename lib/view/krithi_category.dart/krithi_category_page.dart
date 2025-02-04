@@ -92,10 +92,10 @@ class KrithikalContainer extends StatelessWidget {
                           '...'
                       : KrithiDatabase.krithiDatabase[index]['title'],
                   maxLines: 1,
-                  overflow: TextOverflow.fade,
+                  overflow: TextOverflow.ellipsis,
                   style: GoogleFonts.anekMalayalam(
                     textStyle: TextStyle(
-                      fontSize: 18.sp,
+                      fontSize: 15.sp,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
